@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FreshStart – Your first step from graduation to your first job</title>
+<meta name="description" content="FreshStart helps fresh graduates go from degree to first job: career roadmaps, fresher jobs, resume builder, interview prep, skills, projects and certifications.">
+<meta name="theme-color" content="#1f8a4c">
+<link rel="canonical" href="https://udayreddy03.github.io/FreshStart/">
+<meta property="og:type" content="website"><meta property="og:title" content="FreshStart – Your first step from graduation to your first job">
+<meta property="og:description" content="Career roadmaps, jobs, resume builder and interview prep for fresh graduates.">
+<meta property="og:url" content="https://udayreddy03.github.io/FreshStart/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<nav>
+<a class="logo" href="#home">🌱 FreshStart</a>
+<a class="l" href="#jobs">Find Jobs</a><a class="l" href="#roadmaps">Roadmaps</a><a class="l" href="#resume">Resume</a><a class="l" href="#interview">Interview Prep</a><a class="l" href="#skills">Skills</a><a class="l" href="#projects">Projects</a><a class="l" href="#opps">Scholarships &amp; Certs</a><a class="l" href="#career">My Career</a>
+</nav>
+<main>
+
+<section class="v" id="home">
+<h1>Your first step from graduation to your first job.</h1>
+<p class="sub">Tell FreshStart where you are and where you want to go. Get a step-by-step roadmap, then find the jobs, projects and interview practice that fit it.</p>
+<div class="path"><div class="node">🎓 Graduation</div><div class="bar"></div><div class="node">Skills</div><div class="bar"></div><div class="node">Projects</div><div class="bar"></div><div class="node end">First job</div></div>
+<p><a class="btn" href="#jobs">Find jobs</a> &nbsp; <a class="btn g" href="#roadmaps">Build my roadmap</a></p>
+<h2 style="margin-top:44px">What do you want to become?</h2>
+<div class="grid" id="roleTiles"></div>
+<h2>FreshStart tools</h2>
+<div class="grid">
+<a class="tile" href="#resume"><b>📄 Resume Builder</b><span>A clean fresher resume in minutes.</span></a>
+<a class="tile" href="#interview"><b>🎤 Interview Prep</b><span>Technical, aptitude and HR questions.</span></a>
+<a class="tile" href="#skills"><b>🧠 Skill Builder</b><span>What to learn, and where.</span></a>
+<a class="tile" href="#projects"><b>🚀 Project Ideas</b><span>Projects matched to your goal.</span></a>
+</div></section>
+
+<section class="v" id="jobs">
+<h2>Find jobs</h2><p class="sub">Sample listings to show how the page works. Live job feeds come in the next stage.</p>
+<div class="chips" id="jobChips"></div><div class="box" id="jobList"></div></section>
+
+<section class="v" id="roadmaps">
+<h2>Build my career roadmap</h2>
+<div class="two"><div class="box">
+<label>Degree</label><input id="rDeg" value="B.Tech CSE">
+<label>Experience</label><select id="rExp"><option>Fresher</option><option>Internship only</option><option>0–1 year</option></select>
+<label>Software skills you already have (tap to select)</label><div class="chips" id="rSkills"></div>
+<label>Target role</label><select id="rRole"></select>
+<p><button class="btn" id="rGo">Generate roadmap</button></p></div>
+<div class="box" id="rOut"><p class="sub">Your roadmap will appear here. Tick steps as you finish them; they are saved in My Career.</p></div></div></section>
+
+<section class="v" id="resume">
+<h2>Resume builder</h2>
+<div class="two"><div class="box noprint">
+<label>Full name</label><input data-r="name"><label>Email · Phone</label><input data-r="contact">
+<label>Summary</label><textarea data-r="sum" rows="3" placeholder="Recent graduate seeking a …"></textarea>
+<label>Education</label><textarea data-r="edu" rows="2" placeholder="B.Tech CSE, XYZ University, 2026 – 8.1 CGPA"></textarea>
+<label>Skills</label><input data-r="sk" placeholder="Java, SQL, Git, React">
+<label>Projects (one per line)</label><textarea data-r="pr" rows="4"></textarea>
+<label>Certifications / achievements</label><textarea data-r="ce" rows="2"></textarea>
+<p><button class="btn" onclick="print()">Print / save as PDF</button></p></div>
+<div class="res" id="resOut"></div></div></section>
+
+<section class="v" id="interview">
+<h2>Interview prep</h2>
+<div class="chips" id="qChips"></div><div class="box" id="qList"></div></section>
+
+<section class="v" id="skills">
+<h2>Skill builder</h2><p class="sub">Pick a role to see what to learn and free places to learn it.</p>
+<div class="chips" id="skChips"></div><div class="box" id="skOut"></div></section>
+
+<section class="v" id="projects">
+<h2>Project ideas</h2><p class="sub">Two or three finished projects on GitHub beat a long list of courses.</p>
+<div class="chips" id="pjChips"></div><div class="box" id="pjOut"></div></section>
+
+<section class="v" id="opps">
+<h2>Scholarships &amp; certifications</h2><p class="sub">Always confirm eligibility, dates and fees on the official site before applying.</p>
+<h3>Certifications for graduates</h3><div class="box" id="certs"></div>
+<h3>Scholarships and programmes to look up</h3><div class="box" id="schol"></div></section>
+
+<section class="v" id="career">
+<h2>My career</h2><p class="sub">Saved on this device. Account sync arrives with login in a later stage.</p>
+<div class="box"><h3>Learning progress</h3><div class="prog"><i id="pBar" style="width:0"></i></div><p id="pTxt" class="sub"></p></div>
+<div class="box"><h3>Saved jobs</h3><div id="savedList"></div></div>
+<div class="box"><h3>Application tracker</h3>
+<div class="two"><input id="aT" placeholder="Job title"><input id="aC" placeholder="Company"></div>
+<p><button class="btn s" id="aAdd">Add application</button></p><div id="appList"></div></div></section>
+</main>
+<script src="js/app.js" defer></script></body></html>
